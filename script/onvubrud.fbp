@@ -1,0 +1,18 @@
+[Project]
+Version=3
+Description=Editor Files Script Freebasic
+Api=fb (FreeBASIC)
+[Make]
+Current=1
+1=Windows GUI,fbc -s gui
+Recompile=2
+Module=Module Build,fbc -c
+[TabOrder]
+[File]
+1=onvubrud.bas
+2=onvubrud.rc
+3=onvubrud.bi
+4=onvubrud.txt
+[BreakPoint]
+1=
+3=
