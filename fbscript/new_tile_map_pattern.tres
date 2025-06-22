@@ -1,0 +1,8 @@
+[gd_resource type="TileMapPattern" load_steps=2 format=3 uid="uid://bbq8nckhcb468"]
+
+[sub_resource type="GDScript" id="GDScript_3togr"]
+
+[resource]
+resource_local_to_scene = true
+resource_name = "Tile"
+script = SubResource("GDScript_3togr")

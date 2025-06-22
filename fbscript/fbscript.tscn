@@ -1,0 +1,807 @@
+[gd_scene load_steps=76 format=3 uid="uid://bujxh6paaxgsq"]
+
+[ext_resource type="Script" uid="uid://c8mc7acly401k" path="res://freebasic.gd" id="1_ja4qp"]
+[ext_resource type="Script" uid="uid://bbi206m38fgh" path="res://t_form.gd" id="2_ffc8b"]
+[ext_resource type="Script" uid="uid://drw78sfxkdmky" path="res://event.gd" id="4_s06le"]
+[ext_resource type="Material" uid="uid://cmhwjrv0hrkg" path="res://new_shader_material.tres" id="5_hunwm"]
+[ext_resource type="Script" uid="uid://tpar2opu2lma" path="res://tile_map_layer.gd" id="6_s06le"]
+[ext_resource type="Script" uid="uid://brtofnm7d7rsc" path="res://name.gd" id="7_s06le"]
+[ext_resource type="Script" uid="uid://dwc5bfu0dkr73" path="res://http_request.gd" id="8_tk5v0"]
+[ext_resource type="Script" uid="uid://dj8k2su5i4t7l" path="res://h_flow_container.gd" id="9_wtphx"]
+[ext_resource type="Script" uid="uid://dfu4aa616titl" path="res://text_edit.gd" id="10_wtphx"]
+[ext_resource type="Script" uid="uid://dunguckn7didm" path="res://back_buffer_copy.gd" id="11_7n0wn"]
+[ext_resource type="Script" uid="uid://ldroqfluelfw" path="res://output_event.gd" id="12_txtcf"]
+[ext_resource type="Script" uid="uid://borgyqmcamnqb" path="res://graph_frame.gd" id="13_l5kgs"]
+[ext_resource type="Script" uid="uid://38b4dgwxub3p" path="res://visible_on_screen_notifier_2d.gd" id="14_0g3h3"]
+[ext_resource type="Script" uid="uid://cbobtjiy3bmm6" path="res://box_container.gd" id="14_l5kgs"]
+[ext_resource type="Script" uid="uid://cexh6yhf28sb5" path="res://cookies.gd" id="14_txtcf"]
+[ext_resource type="Script" uid="uid://ca23pxl0kkc0x" path="res://peanut.gd" id="15_oy6cx"]
+[ext_resource type="Script" uid="uid://bk60fhcembcsa" path="res://visible_on_screen_enabler_2d.gd" id="15_wttlk"]
+[ext_resource type="Script" uid="uid://buhxgh1knl4p7" path="res://open_xr_interaction_profile_editor.gd" id="16_egjrd"]
+[ext_resource type="Script" uid="uid://x0h2dlvprql1" path="res://text.gd" id="17_fx40w"]
+
+[sub_resource type="World3D" id="World3D_8w6po"]
+
+[sub_resource type="Theme" id="Theme_jfudy"]
+
+[sub_resource type="World3D" id="World3D_tk5v0"]
+
+[sub_resource type="Theme" id="Theme_wtphx"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_j1ab5"]
+
+[sub_resource type="World3D" id="World3D_gei2n"]
+
+[sub_resource type="Theme" id="Theme_bcsbg"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_8xtjh"]
+
+[sub_resource type="TileSet" id="TileSet_bd5uc"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_bd5uc"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tk5v0"]
+
+[sub_resource type="Theme" id="Theme_j1ab5"]
+
+[sub_resource type="FontFile" id="FontFile_gei2n"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_bcsbg"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8xtjh"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_s06le"]
+
+[sub_resource type="Theme" id="Theme_bd5uc"]
+
+[sub_resource type="FontFile" id="FontFile_tk5v0"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+
+[sub_resource type="SystemFont" id="SystemFont_wtphx"]
+
+[sub_resource type="FontVariation" id="FontVariation_j1ab5"]
+
+[sub_resource type="FontFile" id="FontFile_bcsbg"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+
+[sub_resource type="FontVariation" id="FontVariation_8xtjh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7n0wn"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_txtcf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l5kgs"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_0g3h3"]
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_s06le"]
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_bd5uc"]
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_tk5v0"]
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_wtphx"]
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_j1ab5"]
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_gei2n"]
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_bcsbg"]
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_8xtjh"]
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_7n0wn"]
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_txtcf"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_j1ab5"]
+
+[sub_resource type="Theme" id="Theme_gei2n"]
+
+[sub_resource type="Theme" id="Theme_8xtjh"]
+
+[sub_resource type="SyntaxHighlighter" id="SyntaxHighlighter_7n0wn"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_oy6cx"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_egjrd"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fx40w"]
+
+[sub_resource type="Theme" id="Theme_72g4k"]
+
+[sub_resource type="Gradient" id="Gradient_5urc6"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_wbjor"]
+gradient = SubResource("Gradient_5urc6")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_l5kgs"]
+
+[sub_resource type="Theme" id="Theme_0g3h3"]
+
+[sub_resource type="Theme" id="Theme_7n0wn"]
+
+[sub_resource type="Theme" id="Theme_5urc6"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wbjor"]
+
+[sub_resource type="Theme" id="Theme_ckinl"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6shq7"]
+
+[sub_resource type="Theme" id="Theme_5vdlt"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ckinl"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7yc5l"]
+
+[node name="fbscript" type="Node2D"]
+
+[node name="freebasic" type="PopupPanel" parent="."]
+process_mode = 1
+process_thread_group = 1
+process_thread_group_order = 512
+process_thread_messages = 3
+auto_translate_mode = 1
+use_xr = true
+own_world_3d = true
+world_3d = SubResource("World3D_8w6po")
+transparent_bg = false
+snap_2d_transforms_to_pixel = true
+snap_2d_vertices_to_pixel = true
+msaa_2d = 1
+msaa_3d = 2
+screen_space_aa = 1
+use_taa = true
+use_debanding = true
+use_occlusion_culling = true
+debug_draw = 3
+scaling_3d_mode = 2
+vrs_mode = 2
+vrs_update_mode = 2
+canvas_item_default_texture_repeat = 1
+audio_listener_enable_2d = true
+audio_listener_enable_3d = true
+physics_object_picking = true
+physics_object_picking_sort = true
+physics_object_picking_first_only = true
+gui_embed_subwindows = true
+title = "freebasic"
+position = Vector2i(0, 36)
+size = Vector2i(512, 512)
+visible = true
+transient_to_focused = true
+borderless = false
+always_on_top = true
+transparent = false
+extend_to_title = true
+mouse_passthrough = true
+sharp_corners = true
+exclude_from_capture = true
+content_scale_size = Vector2i(1023, 1023)
+content_scale_mode = 1
+content_scale_aspect = 1
+theme = SubResource("Theme_jfudy")
+theme_type_variation = &"freebasic"
+script = ExtResource("1_ja4qp")
+
+[node name="TForm" type="PopupMenu" parent="freebasic"]
+process_mode = 1
+process_priority = 27
+process_physics_priority = 172
+process_thread_group = 1
+process_thread_group_order = 512
+process_thread_messages = 3
+auto_translate_mode = 1
+editor_description = "Dialog Tform Window Platform"
+disable_3d = true
+use_xr = true
+own_world_3d = true
+world_3d = SubResource("World3D_tk5v0")
+snap_2d_transforms_to_pixel = true
+snap_2d_vertices_to_pixel = true
+msaa_2d = 2
+msaa_3d = 2
+screen_space_aa = 1
+use_taa = true
+use_debanding = true
+use_occlusion_culling = true
+debug_draw = 5
+use_hdr_2d = true
+scaling_3d_mode = 2
+vrs_mode = 2
+canvas_item_default_texture_repeat = 1
+physics_object_picking = true
+physics_object_picking_sort = true
+physics_object_picking_first_only = true
+gui_disable_input = true
+gui_embed_subwindows = true
+title = "TForm"
+size = Vector2i(512, 512)
+transient_to_focused = true
+always_on_top = true
+extend_to_title = true
+mouse_passthrough = true
+sharp_corners = true
+exclude_from_capture = true
+force_native = true
+content_scale_size = Vector2i(1023, 1023)
+content_scale_mode = 2
+content_scale_aspect = 1
+theme = SubResource("Theme_wtphx")
+theme_type_variation = &"TForm"
+item_count = 1
+item_0/text = "TForm"
+item_0/icon = SubResource("ViewportTexture_j1ab5")
+item_0/checkable = 2
+item_0/checked = true
+item_0/id = 1
+item_0/separator = true
+script = ExtResource("2_ffc8b")
+
+[node name="Event" type="PopupPanel" parent="freebasic/TForm"]
+process_mode = 1
+process_priority = 27
+process_physics_priority = 172
+process_thread_group = 1
+process_thread_group_order = 512
+process_thread_messages = 3
+auto_translate_mode = 1
+editor_description = "Freebasic TForm Event"
+disable_3d = true
+use_xr = true
+own_world_3d = true
+world_3d = SubResource("World3D_gei2n")
+snap_2d_transforms_to_pixel = true
+snap_2d_vertices_to_pixel = true
+msaa_2d = 3
+msaa_3d = 3
+screen_space_aa = 1
+use_taa = true
+use_debanding = true
+use_occlusion_culling = true
+debug_draw = 7
+use_hdr_2d = true
+scaling_3d_mode = 2
+vrs_mode = 1
+vrs_update_mode = 2
+canvas_item_default_texture_repeat = 1
+physics_object_picking = true
+physics_object_picking_sort = true
+physics_object_picking_first_only = true
+gui_embed_subwindows = true
+size = Vector2i(512, 512)
+transient_to_focused = true
+always_on_top = true
+extend_to_title = true
+mouse_passthrough = true
+sharp_corners = true
+exclude_from_capture = true
+force_native = true
+content_scale_size = Vector2i(1023, 1023)
+content_scale_mode = 1
+content_scale_aspect = 1
+theme = SubResource("Theme_bcsbg")
+theme_type_variation = &"Event"
+theme_override_styles/panel = SubResource("StyleBoxLine_8xtjh")
+script = ExtResource("4_s06le")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="freebasic/TForm/Event"]
+process_mode = 1
+process_priority = 27
+process_physics_priority = 172
+process_thread_group = 1
+process_thread_group_order = 512
+process_thread_messages = 3
+physics_interpolation_mode = 1
+auto_translate_mode = 1
+editor_description = "Title Name Descrition name about label input of name "
+show_behind_parent = true
+top_level = true
+clip_children = 2
+z_index = 512
+y_sort_enabled = true
+texture_filter = 2
+texture_repeat = 2
+material = ExtResource("5_hunwm")
+use_parent_material = true
+tile_set = SubResource("TileSet_bd5uc")
+use_kinematic_bodies = true
+script = ExtResource("6_s06le")
+
+[node name="Name" type="CanvasModulate" parent="freebasic/TForm/Event/TileMapLayer"]
+process_mode = 3
+process_priority = 27
+process_physics_priority = 172
+process_thread_group = 1
+process_thread_group_order = 512
+process_thread_messages = 3
+physics_interpolation_mode = 1
+auto_translate_mode = 1
+editor_description = "Angles Vector Square Trigonometric Cell Names to Attributes Input about Point
+Cell Name."
+show_behind_parent = true
+top_level = true
+clip_children = 2
+z_index = 512
+y_sort_enabled = true
+texture_filter = 2
+texture_repeat = 2
+material = SubResource("CanvasItemMaterial_bd5uc")
+use_parent_material = true
+rotation = 0.115192
+scale = Vector2(6, 6)
+skew = 0.20944
+script = ExtResource("7_s06le")
+
+[node name="Label" type="Label" parent="freebasic/TForm/Event/TileMapLayer" node_paths=PackedStringArray("shortcut_context")]
+process_priority = 27
+process_physics_priority = 187
+process_thread_group = 1
+process_thread_group_order = 0
+process_thread_messages = 3
+physics_interpolation_mode = 0
+editor_description = "Label Float and Vector2 "
+show_behind_parent = true
+top_level = true
+clip_children = 2
+z_index = 512
+y_sort_enabled = true
+texture_filter = 2
+texture_repeat = 2
+material = SubResource("ShaderMaterial_tk5v0")
+use_parent_material = true
+clip_contents = true
+layout_direction = 1
+offset_right = 40.0
+offset_bottom = 23.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+focus_neighbor_left = NodePath(".")
+mouse_filter = 1
+shortcut_context = NodePath("../Name")
+theme = SubResource("Theme_j1ab5")
+theme_type_variation = &"GraphFrameTitleLabel"
+theme_override_colors/font_color = Color(0.391819, 0.391819, 0.391819, 1)
+theme_override_colors/font_shadow_color = Color(0.442911, 0.442911, 0.442911, 1)
+theme_override_colors/font_outline_color = Color(0.331639, 0.331639, 0.331639, 1)
+theme_override_constants/line_spacing = 64
+theme_override_constants/paragraph_spacing = 71
+theme_override_constants/shadow_offset_x = 55
+theme_override_constants/shadow_offset_y = 64
+theme_override_constants/outline_size = 71
+theme_override_constants/shadow_outline_size = 55
+theme_override_fonts/font = SubResource("FontFile_gei2n")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxLine_bcsbg")
+label_settings = SubResource("LabelSettings_8xtjh")
+justification_flags = 235
+clip_text = true
+uppercase = true
+language = "Freebasic"
+structured_text_bidi_override = 4
+structured_text_bidi_override_options = [0.0, Vector2(0, 0), 0.0, Vector2(0, 0), 0.0, Vector2(0, 0), 0.0, Vector2(0, 0), 0.0, Vector2(0, 0)]
+
+[node name="MathText" type="RichTextLabel" parent="freebasic/TForm/Event/TileMapLayer" node_paths=PackedStringArray("shortcut_context")]
+process_mode = 3
+process_priority = 27
+process_physics_priority = 172
+process_thread_group = 1
+process_thread_group_order = 512
+process_thread_messages = 3
+physics_interpolation_mode = 1
+auto_translate_mode = 1
+editor_description = "Cell Math Frebasic Calculate  linear equation 1 and 2 degree about  plot and graphic linear."
+show_behind_parent = true
+top_level = true
+clip_children = 2
+z_index = 512
+y_sort_enabled = true
+texture_filter = 2
+texture_repeat = 2
+material = SubResource("ShaderMaterial_s06le")
+use_parent_material = true
+layout_direction = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_neighbor_right = NodePath(".")
+focus_mode = 2
+shortcut_context = NodePath("../Label")
+theme = SubResource("Theme_bd5uc")
+theme_override_colors/table_border = Color(0.391819, 0.391819, 0.391819, 1)
+theme_override_colors/table_even_row_bg = Color(0.432624, 0.432624, 0.432624, 1)
+theme_override_colors/table_odd_row_bg = Color(0.331639, 0.331639, 0.331639, 1)
+theme_override_colors/default_color = Color(0.391819, 0.391819, 0.391819, 1)
+theme_override_colors/font_selected_color = Color(0.442911, 0.442911, 0.442911, 1)
+theme_override_colors/selection_color = Color(0.74978, 0.74978, 0.74978, 1)
+theme_override_colors/font_outline_color = Color(0.152476, 0.152476, 0.152476, 1)
+theme_override_colors/font_shadow_color = Color(0.744181, 0.744181, 0.744181, 1)
+theme_override_constants/table_v_separation = 64
+theme_override_constants/table_h_separation = 71
+theme_override_constants/text_highlight_v_padding = 55
+theme_override_constants/text_highlight_h_padding = 64
+theme_override_constants/outline_size = 71
+theme_override_constants/shadow_offset_y = 55
+theme_override_constants/shadow_offset_x = 64
+theme_override_constants/shadow_outline_size = 71
+theme_override_constants/line_separation = 55
+theme_override_fonts/normal_font = SubResource("FontFile_tk5v0")
+theme_override_fonts/mono_font = SubResource("SystemFont_wtphx")
+theme_override_fonts/italics_font = SubResource("FontVariation_j1ab5")
+theme_override_fonts/bold_italics_font = SubResource("FontFile_bcsbg")
+theme_override_fonts/bold_font = SubResource("FontVariation_8xtjh")
+theme_override_font_sizes/bold_italics_font_size = 12
+theme_override_font_sizes/italics_font_size = 12
+theme_override_font_sizes/mono_font_size = 12
+theme_override_font_sizes/normal_font_size = 12
+theme_override_font_sizes/bold_font_size = 12
+theme_override_styles/fill = SubResource("StyleBoxEmpty_7n0wn")
+theme_override_styles/background = SubResource("StyleBoxTexture_txtcf")
+theme_override_styles/focus = SubResource("StyleBoxFlat_l5kgs")
+theme_override_styles/normal = SubResource("StyleBoxLine_0g3h3")
+fit_content = true
+scroll_following = true
+context_menu_enabled = true
+justification_flags = 235
+custom_effects = [SubResource("RichTextEffect_s06le"), SubResource("RichTextEffect_bd5uc"), SubResource("RichTextEffect_tk5v0"), SubResource("RichTextEffect_wtphx"), SubResource("RichTextEffect_j1ab5"), SubResource("RichTextEffect_gei2n"), SubResource("RichTextEffect_bcsbg"), SubResource("RichTextEffect_8xtjh"), SubResource("RichTextEffect_7n0wn"), SubResource("RichTextEffect_txtcf")]
+threaded = true
+selection_enabled = true
+language = "Freebasic"
+structured_text_bidi_override_options = [null, null, null, null, null, null, null, null, null, null]
+
+[node name="HTTPRequest" type="HTTPRequest" parent="freebasic/TForm/Event/TileMapLayer"]
+process_mode = 3
+process_priority = 27
+process_physics_priority = 172
+process_thread_group = 1
+process_thread_group_order = 512
+process_thread_messages = 3
+physics_interpolation_mode = 1
+auto_translate_mode = 1
+editor_description = "Math and Physics and Science and Computing"
+use_threads = true
+script = ExtResource("8_tk5v0")
+
+[node name="HFlowContainer" type="HFlowContainer" parent="freebasic/TForm/Event" node_paths=PackedStringArray("shortcut_context")]
+process_mode = 2
+process_priority = 27
+process_physics_priority = 172
+process_thread_group = 1
+process_thread_group_order = 512
+process_thread_messages = 3
+physics_interpolation_mode = 1
+auto_translate_mode = 1
+editor_description = "Flow Container Choise"
+show_behind_parent = true
+top_level = true
+z_index = 512
+texture_filter = 2
+texture_repeat = 2
+material = SubResource("ShaderMaterial_j1ab5")
+use_parent_material = true
+clip_contents = true
+layout_direction = 1
+offset_right = 40.0
+offset_bottom = 40.0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+shortcut_context = NodePath(".")
+theme = SubResource("Theme_gei2n")
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+script = ExtResource("9_wtphx")
+
+[node name="TextEdit" type="TextEdit" parent="freebasic/TForm/Event/HFlowContainer" node_paths=PackedStringArray("shortcut_context")]
+process_mode = 3
+process_thread_group = 1
+process_thread_group_order = 0
+process_thread_messages = 3
+physics_interpolation_mode = 1
+auto_translate_mode = 1
+editor_description = "Textarea"
+show_behind_parent = true
+top_level = true
+clip_children = 2
+z_index = 512
+y_sort_enabled = true
+texture_filter = 2
+texture_repeat = 2
+layout_direction = 1
+layout_mode = 2
+size_flags_horizontal = 3
+focus_previous = NodePath(".")
+shortcut_context = NodePath(".")
+theme = SubResource("Theme_8xtjh")
+theme_type_variation = &"TextEdit"
+indent_wrapped_lines = true
+scroll_smooth = true
+scroll_past_end_of_file = true
+scroll_fit_content_height = true
+scroll_fit_content_width = true
+minimap_draw = true
+caret_blink = true
+caret_draw_when_editable_disabled = true
+caret_mid_grapheme = true
+use_custom_word_separators = true
+syntax_highlighter = SubResource("SyntaxHighlighter_7n0wn")
+highlight_all_occurrences = true
+highlight_current_line = true
+draw_control_chars = true
+draw_tabs = true
+draw_spaces = true
+language = "Freebasic"
+structured_text_bidi_override_options = [null, null, null, null, null, null, null, null, null, null]
+script = ExtResource("10_wtphx")
+
+[node name="BackBufferCopy" type="BackBufferCopy" parent="freebasic/TForm/Event/HFlowContainer/TextEdit"]
+process_priority = 27
+process_physics_priority = 172
+show_behind_parent = true
+top_level = true
+z_index = 512
+y_sort_enabled = true
+material = SubResource("ShaderMaterial_oy6cx")
+use_parent_material = true
+script = ExtResource("11_7n0wn")
+
+[node name="OutputEvent" type="Node2D" parent="freebasic/TForm/Event/HFlowContainer/TextEdit/BackBufferCopy"]
+process_mode = 3
+process_priority = 27
+process_physics_priority = 172
+process_thread_group = 1
+process_thread_group_order = 512
+process_thread_messages = 3
+physics_interpolation_mode = 1
+auto_translate_mode = 1
+editor_description = "Output Event Preview Buffer Files"
+show_behind_parent = true
+top_level = true
+clip_children = 2
+z_index = 512
+y_sort_enabled = true
+texture_filter = 2
+texture_repeat = 2
+material = SubResource("ShaderMaterial_egjrd")
+use_parent_material = true
+script = ExtResource("12_txtcf")
+
+[node name="GraphFrame" type="GraphFrame" parent="freebasic/TForm/Event/HFlowContainer/TextEdit/BackBufferCopy/OutputEvent" node_paths=PackedStringArray("shortcut_context")]
+process_mode = 1
+process_priority = 27
+process_physics_priority = 172
+process_thread_group = 2
+process_thread_group_order = 512
+process_thread_messages = 3
+physics_interpolation_mode = 1
+auto_translate_mode = 1
+show_behind_parent = true
+top_level = true
+z_index = 512
+y_sort_enabled = true
+texture_filter = 5
+texture_repeat = 2
+material = SubResource("ShaderMaterial_fx40w")
+use_parent_material = true
+clip_contents = true
+layout_direction = 1
+offset_right = 9.0
+offset_bottom = 63.0
+size_flags_horizontal = 2
+size_flags_vertical = 3
+focus_previous = NodePath(".")
+shortcut_context = NodePath(".")
+theme = SubResource("Theme_72g4k")
+theme_override_icons/resizer = SubResource("GradientTexture2D_wbjor")
+theme_override_colors/resizer_color = Color(0.391819, 0.391819, 0.391819, 1)
+selected = true
+tint_color_enabled = true
+script = ExtResource("13_l5kgs")
+
+[node name="Cookies" type="GraphNode" parent="freebasic/TForm/Event/HFlowContainer/TextEdit/BackBufferCopy/OutputEvent/GraphFrame" node_paths=PackedStringArray("shortcut_context")]
+process_mode = 2
+process_priority = 27
+process_physics_priority = 172
+process_thread_group = 1
+process_thread_group_order = 512
+process_thread_messages = 3
+physics_interpolation_mode = 1
+auto_translate_mode = 1
+show_behind_parent = true
+top_level = true
+clip_children = 2
+z_index = 512
+y_sort_enabled = true
+texture_filter = 6
+texture_repeat = 2
+material = SubResource("ShaderMaterial_l5kgs")
+use_parent_material = true
+clip_contents = true
+layout_direction = 4
+layout_mode = 2
+offset_right = 9.0
+offset_bottom = 55.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_neighbor_left = NodePath(".")
+focus_next = NodePath(".")
+focus_previous = NodePath(".")
+focus_mode = 2
+shortcut_context = NodePath(".")
+theme = SubResource("Theme_0g3h3")
+theme_type_variation = &"Cookies"
+selected = true
+script = ExtResource("14_txtcf")
+
+[node name="BoxContainer" type="BoxContainer" parent="freebasic/TForm/Event/HFlowContainer/TextEdit/BackBufferCopy" node_paths=PackedStringArray("shortcut_context")]
+process_mode = 2
+process_priority = 512
+process_physics_priority = 172
+process_thread_group = 1
+process_thread_group_order = 512
+process_thread_messages = 3
+physics_interpolation_mode = 1
+auto_translate_mode = 1
+editor_description = "peanut foster always content dialog event cell messages servers launch local files. "
+show_behind_parent = true
+y_sort_enabled = true
+texture_filter = 4
+texture_repeat = 2
+clip_contents = true
+offset_right = 40.0
+offset_bottom = 40.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath(".")
+focus_neighbor_right = NodePath(".")
+focus_next = NodePath(".")
+focus_previous = NodePath(".")
+focus_mode = 1
+shortcut_context = NodePath(".")
+theme = SubResource("Theme_7n0wn")
+vertical = true
+script = ExtResource("14_l5kgs")
+
+[node name="Peanut" type="HBoxContainer" parent="freebasic/TForm/Event/HFlowContainer/TextEdit/BackBufferCopy/BoxContainer" node_paths=PackedStringArray("shortcut_context")]
+process_mode = 1
+process_priority = 27
+process_physics_priority = 172
+process_thread_group = 1
+process_thread_group_order = 6512
+process_thread_messages = 3
+physics_interpolation_mode = 1
+auto_translate_mode = 1
+editor_description = "Cell Production Peanut Files to Event Math Search Items Local Free Features Layout static box linear equation."
+show_behind_parent = true
+top_level = true
+clip_children = 1
+z_index = 512
+y_sort_enabled = true
+texture_filter = 1
+texture_repeat = 2
+clip_contents = true
+layout_direction = 1
+layout_mode = 2
+size_flags_vertical = 3
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath(".")
+focus_neighbor_right = NodePath(".")
+focus_next = NodePath(".")
+focus_previous = NodePath(".")
+focus_mode = 1
+shortcut_context = NodePath(".")
+theme = SubResource("Theme_5urc6")
+script = ExtResource("15_oy6cx")
+
+[node name="OpenXRInteractionProfileEditor" type="OpenXRInteractionProfileEditor" parent="freebasic/TForm/Event/HFlowContainer/TextEdit/BackBufferCopy/BoxContainer/Peanut" node_paths=PackedStringArray("shortcut_context")]
+process_mode = 1
+process_priority = 512
+process_physics_priority = 89512
+process_thread_group = 1
+process_thread_group_order = 512
+process_thread_messages = 3
+physics_interpolation_mode = 1
+auto_translate_mode = 1
+editor_description = "Cell Production Peanut Math Foster Aplication Field All Times Good Product to Items Cell Features. "
+show_behind_parent = true
+top_level = true
+clip_children = 2
+y_sort_enabled = true
+texture_filter = 1
+texture_repeat = 2
+material = SubResource("ShaderMaterial_wbjor")
+use_parent_material = true
+clip_contents = true
+layout_direction = 1
+layout_mode = 2
+focus_previous = NodePath(".")
+shortcut_context = NodePath(".")
+theme = SubResource("Theme_ckinl")
+theme_type_variation = &"Panel"
+script = ExtResource("16_egjrd")
+
+[node name="Text" type="Control" parent="freebasic/TForm/Event/HFlowContainer/TextEdit/BackBufferCopy" node_paths=PackedStringArray("shortcut_context")]
+process_mode = 1
+process_priority = 512
+process_physics_priority = 512
+process_thread_group = 1
+process_thread_group_order = 512
+process_thread_messages = 3
+physics_interpolation_mode = 1
+auto_translate_mode = 1
+editor_description = "Select Files Cell Math Analysis Features in Dialog Text Local Object Product Items Event Flying."
+show_behind_parent = true
+top_level = true
+clip_children = 1
+z_index = 512
+y_sort_enabled = true
+texture_filter = 1
+texture_repeat = 2
+material = SubResource("ShaderMaterial_6shq7")
+use_parent_material = true
+clip_contents = true
+layout_direction = 1
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_previous = NodePath(".")
+shortcut_context = NodePath(".")
+theme = SubResource("Theme_5vdlt")
+script = ExtResource("17_fx40w")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="freebasic/TForm/Event/HFlowContainer/TextEdit"]
+process_mode = 2
+process_priority = 27
+process_physics_priority = 172
+process_thread_group = 2
+process_thread_group_order = 512
+process_thread_messages = 3
+physics_interpolation_mode = 1
+auto_translate_mode = 1
+editor_description = "Visible Math On Screen"
+show_behind_parent = true
+top_level = true
+z_index = 512
+y_sort_enabled = true
+material = SubResource("ShaderMaterial_ckinl")
+use_parent_material = true
+script = ExtResource("14_0g3h3")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="freebasic/TForm/Event/HFlowContainer/TextEdit/VisibleOnScreenNotifier2D"]
+process_mode = 1
+process_priority = 27
+process_physics_priority = 172
+process_thread_group = 2
+process_thread_group_order = 512
+process_thread_messages = 3
+physics_interpolation_mode = 1
+auto_translate_mode = 1
+show_behind_parent = true
+top_level = true
+z_index = 512
+y_sort_enabled = true
+material = SubResource("ShaderMaterial_7yc5l")
+use_parent_material = true
+script = ExtResource("15_wttlk")
